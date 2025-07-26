@@ -2,7 +2,7 @@ import { Link } from "react-router-dom";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import { Button } from "@/components/ui/button";
-import { ArrowRight, Users, BookOpen, Award, Star, ChevronRight, GraduationCap, Target, Clock, CheckCircle } from "lucide-react";
+import { ArrowRight, Users, BookOpen, Award, Star, ChevronRight, GraduationCap, Target, Clock, CheckCircle, Smartphone } from "lucide-react";
 import { useCountAnimation } from "@/hooks/useCountAnimation";
 import { useState, useEffect, useRef } from "react";
 import {
@@ -564,6 +564,35 @@ const Index = () => {
                 </div>
               </Link>
             ))}
+          </div>
+
+          {/* WhatsApp Navigation Card */}
+          <div className="mb-8">
+            <a 
+              href="https://whatsapp.com/channel/0029VbAgerFK5cDGJiW71o1U" 
+              target="_blank" 
+              rel="noopener noreferrer"
+              className="group"
+            >
+              <div className="bg-gradient-to-r from-green-500 to-green-600 rounded-2xl p-8 shadow-xl border border-green-200 hover:shadow-2xl transition-all duration-500 hover:scale-105 animate-fade-in-up">
+                <div className="flex items-center justify-center space-x-6 text-white">
+                  <div className="bg-white/20 rounded-full p-4 backdrop-blur-sm">
+                    <Smartphone className="h-12 w-12" />
+                  </div>
+                  <div className="text-center">
+                    <h3 className="text-2xl font-bold mb-2">Join Our WhatsApp Channel</h3>
+                    <p className="text-white/90 mb-4">Get instant updates, tips, and connect with fellow medical coders</p>
+                    <div className="flex items-center justify-center space-x-2 bg-white/20 rounded-full px-6 py-2 backdrop-blur-sm">
+                      <span className="font-semibold">Click to Join</span>
+                      <ChevronRight className="h-5 w-5 group-hover:translate-x-2 transition-transform duration-300" />
+                    </div>
+                  </div>
+                  <div className="bg-white/20 rounded-full p-4 backdrop-blur-sm floating">
+                    <Users className="h-12 w-12" />
+                  </div>
+                </div>
+              </div>
+            </a>
           </div>
           
           <div className="text-center">
