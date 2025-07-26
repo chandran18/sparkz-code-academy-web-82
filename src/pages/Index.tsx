@@ -426,27 +426,27 @@ const Index = () => {
 
               {/* Main Stats Box Layout */}
               <div className="grid grid-cols-2 gap-4 mb-6">
-                <div className="metric-card bg-white rounded-xl p-4 shadow-lg border border-gray-100 floating hover:shadow-xl transition-all duration-300" role="region" aria-label="Student enrollment statistics">
+                <div className="metric-card bg-white rounded-xl p-4 shadow-lg border border-gray-100 animate-slide-up-down hover:shadow-xl transition-all duration-300" role="region" aria-label="Student enrollment statistics">
                   <div className="text-center">
                     <div className="w-12 h-12 bg-primary/10 rounded-full flex items-center justify-center mx-auto mb-3">
                       <Users className="h-6 w-6 text-primary" aria-hidden="true" />
                     </div>
-                    <div className="text-3xl font-bold text-primary mb-1">5K</div>
+                    <div className="text-3xl font-bold text-primary mb-1">5K+</div>
                     <div className="text-sm text-gray-600 font-medium">STUDENT ENROLLED</div>
                   </div>
                 </div>
 
-                <div className="metric-card bg-white rounded-xl p-4 shadow-lg border border-gray-100 floating hover:shadow-xl transition-all duration-300" style={{animationDelay: '0.3s'}} role="region" aria-label="Classes completed statistics">
+                <div className="metric-card bg-white rounded-xl p-4 shadow-lg border border-gray-100 animate-slide-up-down hover:shadow-xl transition-all duration-300" style={{animationDelay: '0.5s'}} role="region" aria-label="Classes completed statistics">
                   <div className="text-center">
                     <div className="w-12 h-12 bg-success/10 rounded-full flex items-center justify-center mx-auto mb-3">
                       <BookOpen className="h-6 w-6 text-success" aria-hidden="true" />
                     </div>
-                    <div className="text-3xl font-bold text-success mb-1">10K</div>
-                    <div className="text-sm text-gray-600 font-medium">CLASS COMPLETED</div>
+                    <div className="text-3xl font-bold text-success mb-1">10K+</div>
+                    <div className="text-sm text-gray-600 font-medium">CLASSES COMPLETED</div>
                   </div>
                 </div>
 
-                <div className="metric-card bg-white rounded-xl p-4 shadow-lg border border-gray-100 floating hover:shadow-xl transition-all duration-300" style={{animationDelay: '0.6s'}} role="region" aria-label="Top instructors statistics">
+                <div className="metric-card bg-white rounded-xl p-4 shadow-lg border border-gray-100 animate-slide-up-down hover:shadow-xl transition-all duration-300" style={{animationDelay: '1s'}} role="region" aria-label="Top instructors statistics">
                   <div className="text-center">
                     <div className="w-12 h-12 bg-secondary/10 rounded-full flex items-center justify-center mx-auto mb-3">
                       <GraduationCap className="h-6 w-6 text-secondary" aria-hidden="true" />
@@ -456,7 +456,7 @@ const Index = () => {
                   </div>
                 </div>
 
-                <div className="metric-card bg-white rounded-xl p-4 shadow-lg border border-gray-100 floating hover:shadow-xl transition-all duration-300" style={{animationDelay: '0.9s'}} role="region" aria-label="Satisfaction rate statistics">
+                <div className="metric-card bg-white rounded-xl p-4 shadow-lg border border-gray-100 animate-slide-up-down hover:shadow-xl transition-all duration-300" style={{animationDelay: '1.5s'}} role="region" aria-label="Satisfaction rate statistics">
                   <div className="text-center">
                     <div className="w-12 h-12 bg-accent/10 rounded-full flex items-center justify-center mx-auto mb-3">
                       <CheckCircle className="h-6 w-6 text-accent" aria-hidden="true" />
@@ -536,8 +536,8 @@ const Index = () => {
             {courses.slice(0, 4).map((course, index) => (
               <Link key={index} to={course.path} className="group">
                 <div 
-                  className="course-card bg-white rounded-xl p-6 shadow-md border border-gray-100"
-                  style={{animationDelay: `${index * 0.1}s`}}
+                  className="course-card bg-white rounded-xl p-6 shadow-md border border-gray-100 animate-slide-horizontal"
+                  style={{animationDelay: `${index * 0.8}s`}}
                 >
                   <div className="overflow-hidden rounded-lg mb-4">
                     <img 

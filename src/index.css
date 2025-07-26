@@ -226,6 +226,24 @@
     }
   }
 
+  @keyframes slideUpDown {
+    0%, 100% {
+      transform: translateY(0);
+    }
+    50% {
+      transform: translateY(-10px);
+    }
+  }
+
+  @keyframes slideHorizontal {
+    0% {
+      transform: translateX(-100%);
+    }
+    100% {
+      transform: translateX(100%);
+    }
+  }
+
   @keyframes slideInBottom {
     from {
       opacity: 0;
@@ -273,6 +291,14 @@
 
   .animate-slide-in-bottom {
     animation: slideInBottom 0.6s ease-out;
+  }
+
+  .animate-slide-up-down {
+    animation: slideUpDown 3s ease-in-out infinite;
+  }
+
+  .animate-slide-horizontal {
+    animation: slideHorizontal 8s linear infinite;
   }
 
   .hero-animated-bg {

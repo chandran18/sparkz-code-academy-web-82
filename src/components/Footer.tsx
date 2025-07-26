@@ -2,14 +2,14 @@ import { Facebook, Instagram, Linkedin, Youtube, CheckCircle } from "lucide-reac
 
 const Footer = () => {
   const courses = [
-    "Basic Medical Coding Training (BMCT) – 35 Days",
-    "Advanced Medical Coding Training (AMCT)",
-    "CPC-Certified Professional Coder Certification Training – AAPC (CPC)",
-    "CRC-Certified Risk Adjustment Coder Training (CRC)",
-    "CCS – Certified Coding Specialist Training",
-    "CPMA – Certified Professional Medical Auditor Training",
-    "COC – Certified Outpatient Coder",
-    "Specialty Evaluation and Management Training (Specialty E&M)"
+    "CPC Certification - 60 Days",
+    "IPDRG Training - 30 Days", 
+    "CRC Certification - 45 Days",
+    "CCS Training - 75 Days",
+    "Basic Medical Coding - 45 Days",
+    "E&M Speciality - 30 Days",
+    "ED Speciality - 30 Days",
+    "Comprehensive Training - 90 Days"
   ];
 
   const quickLinks = [
@@ -96,17 +96,14 @@ const Footer = () => {
               <div>
                 <p className="font-medium text-white mb-3">Follow Us:</p>
                 <div className="flex space-x-4">
-                  <a href="#" className="group">
-                    <Facebook className="h-6 w-6 text-blue-500 hover:text-blue-400 cursor-pointer transition-all duration-300 hover:scale-110 group-hover:animate-pulse" />
-                  </a>
-                  <a href="#" className="group">
+                  <a href="https://www.instagram.com/nexgen.healthcare?igsh=ZHFhNmE3YWNjNzNv" target="_blank" rel="noopener noreferrer" className="group">
                     <Instagram className="h-6 w-6 text-pink-500 hover:text-pink-400 cursor-pointer transition-all duration-300 hover:scale-110 group-hover:animate-pulse" />
                   </a>
-                  <a href="#" className="group">
+                  <a href="https://www.linkedin.com/company/nexgenhealthcoding/" target="_blank" rel="noopener noreferrer" className="group">
                     <Linkedin className="h-6 w-6 text-blue-600 hover:text-blue-500 cursor-pointer transition-all duration-300 hover:scale-110 group-hover:animate-pulse" />
                   </a>
-                  <a href="#" className="group">
-                    <Youtube className="h-6 w-6 text-red-500 hover:text-red-400 cursor-pointer transition-all duration-300 hover:scale-110 group-hover:animate-pulse" />
+                  <a href="https://whatsapp.com/channel/0029VbAgerFK5cDGJiW71o1U" target="_blank" rel="noopener noreferrer" className="group">
+                    <Youtube className="h-6 w-6 text-green-500 hover:text-green-400 cursor-pointer transition-all duration-300 hover:scale-110 group-hover:animate-pulse" />
                   </a>
                 </div>
               </div>
