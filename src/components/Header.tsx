@@ -96,6 +96,32 @@ const Header = () => {
               </DropdownMenuContent>
             </DropdownMenu>
 
+            {/* Admission Dropdown */}
+            <DropdownMenu>
+              <DropdownMenuTrigger className="flex items-center space-x-1 font-medium text-gray-700 hover:text-primary transition-colors">
+                <span>Admission</span>
+                <ChevronDown className="h-4 w-4" />
+              </DropdownMenuTrigger>
+              <DropdownMenuContent className="w-48 bg-white">
+                <DropdownMenuItem asChild>
+                  <Link
+                    to="/enrollment"
+                    className="w-full px-4 py-2 hover:bg-gray-50 transition-colors"
+                  >
+                    Enroll Now
+                  </Link>
+                </DropdownMenuItem>
+                <DropdownMenuItem asChild>
+                  <Link
+                    to="/refer-friend"
+                    className="w-full px-4 py-2 hover:bg-gray-50 transition-colors"
+                  >
+                    Refer a Friend
+                  </Link>
+                </DropdownMenuItem>
+              </DropdownMenuContent>
+            </DropdownMenu>
+
             <Link
               to="/results"
               className={`font-medium transition-colors hover:text-primary ${
@@ -172,6 +198,23 @@ const Header = () => {
                       {course.name}
                     </Link>
                   ))}
+                </div>
+              </div>
+              <div className="space-y-2">
+                <div className="font-medium text-gray-700">Admission</div>
+                <div className="pl-4 space-y-2">
+                  <Link
+                    to="/enrollment"
+                    className="block text-sm text-gray-600 hover:text-primary"
+                  >
+                    Enroll Now
+                  </Link>
+                  <Link
+                    to="/refer-friend"
+                    className="block text-sm text-gray-600 hover:text-primary"
+                  >
+                    Refer a Friend
+                  </Link>
                 </div>
               </div>
               <Link to="/results" className="font-medium text-gray-700 hover:text-primary">

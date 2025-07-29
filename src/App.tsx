@@ -10,7 +10,10 @@ import Career from "./pages/Career";
 import Gallery from "./pages/Gallery";
 import Results from "./pages/Results";
 import Contact from "./pages/Contact";
+import Courses from "./pages/Courses";
 import CourseDetail from "./pages/CourseDetail";
+import Enrollment from "./pages/Enrollment";
+import ReferFriend from "./pages/ReferFriend";
 import Registration from "./pages/Registration";
 import NotFound from "./pages/NotFound";
 
@@ -55,12 +58,22 @@ const App = () => (
           } />
           <Route path="/courses" element={
             <PageTransition>
-              <CourseDetail />
+              <Courses />
             </PageTransition>
           } />
           <Route path="/courses/:courseId" element={
             <PageTransition>
               <CourseDetail />
+            </PageTransition>
+          } />
+          <Route path="/enrollment" element={
+            <PageTransition>
+              <Enrollment />
+            </PageTransition>
+          } />
+          <Route path="/refer-friend" element={
+            <PageTransition>
+              <ReferFriend />
             </PageTransition>
           } />
           <Route path="/registration" element={
