@@ -91,7 +91,7 @@ const About = () => {
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center text-white">
             <div className="animate-slide-in-left">
               <h1 className="text-4xl md:text-6xl font-bold mb-6 leading-tight">
-                About <span className="text-primary">NexXgen Healthcare Solutions</span>
+                About <span className="text-primary">Nexgen Healthcare Solutions</span>
               </h1>
               <p className="text-xl mb-8 leading-relaxed opacity-90">
                 Not just training — we build careers in medical coding.
@@ -127,12 +127,12 @@ const About = () => {
         </div>
       </section>
 
-      {/* Why Choose NexXgen Section */}
+      {/* Why Choose Nexgen Section */}
       <section className="py-20 bg-gradient-to-br from-primary/5 via-white to-secondary/5">
         <div className="container mx-auto px-4">
           <div className="text-center mb-16 animate-fade-in-up">
             <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
-              Why Choose <span className="text-primary">NexXgen Healthcare Solutions</span>
+              Why Choose <span className="text-primary">Nexgen Healthcare Solutions</span>
             </h2>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">
               Not just training — we build careers in medical coding.
@@ -166,7 +166,7 @@ const About = () => {
 
           <div className="text-center animate-fade-in-up">
             <p className="text-lg text-primary font-semibold mb-4">
-              👉 Join the NexXgen community and take the first step toward a high-paying healthcare career!
+              👉 Join the Nexgen community and take the first step toward a high-paying healthcare career!
             </p>
             <Link to="/contact">
               <Button size="lg" className="bg-primary hover:bg-primary-dark text-white px-8 py-4 text-lg">
@@ -268,12 +268,12 @@ const About = () => {
         </div>
       </section>
 
-      {/* Why Students Choose NexXgen */}
+      {/* Why Students Choose Nexgen */}
       <section className="py-20 bg-gradient-to-br from-gray-50 via-white to-primary/5">
         <div className="container mx-auto px-4">
           <div className="text-center mb-16 animate-fade-in-up">
             <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
-              Why Students Choose <span className="text-primary">NexXgen</span>
+              Why Students Choose <span className="text-primary">Nexgen</span>
             </h2>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">
               Use a vibrant layout with emojis/icons next to titles.
@@ -373,7 +373,7 @@ const About = () => {
               Success Stories & Testimonials
             </h2>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              Hear from our alumni who have transformed their careers with NexXgen training.
+              Hear from our alumni who have transformed their careers with Nexgen training.
             </p>
           </div>
           
@@ -388,7 +388,7 @@ const About = () => {
                   <Star className="h-6 w-6 text-yellow-500" />
                 </div>
                 <p className="text-lg text-gray-700 leading-relaxed mb-6 italic">
-                  "The training at NexXgen was comprehensive and practical. The instructors 
+                  "The training at Nexgen was comprehensive and practical. The instructors 
                   were very supportive and helped me understand complex medical coding concepts 
                   with ease. I'm now successfully working as a certified medical coder earning 
                   3x my previous salary!"
