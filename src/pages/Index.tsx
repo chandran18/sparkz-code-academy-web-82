@@ -366,18 +366,18 @@ const Index = () => {
         </div>
       </section>
 
-      {/* About NexXgen Healthcare Solutions Section */}
+      {/* About Nexgen Healthcare Solutions Section */}
       <section className="py-20 bg-gradient-to-br from-gray-50 via-white to-primary/5">
         <div className="container mx-auto px-4">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
             {/* Left Side - Content */}
             <div className="animate-slide-in-left">
               <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6 leading-tight">
-                About <span className="text-primary bg-gradient-to-r from-primary to-primary-dark bg-clip-text text-transparent">NexXgen Healthcare Solutions</span>
+                About <span className="text-primary bg-gradient-to-r from-primary to-primary-dark bg-clip-text text-transparent">Nexgen Healthcare Solutions</span>
               </h2>
               
               <p className="text-lg text-gray-600 mb-8 leading-relaxed">
-                At NexXgen, we specialize in training the next generation of certified medical coders. 
+                At Nexgen, we specialize in training the next generation of certified medical coders. 
                 Whether you're just starting or aiming for certifications like CPC, CRC, or CCS, our 
                 expert-led courses are designed to get you certified and job-ready.
               </p>
@@ -386,7 +386,7 @@ const Index = () => {
                 <Button 
                   size="lg" 
                   className="bg-primary hover:bg-primary-dark text-white px-8 py-4 text-lg transform hover:scale-105 transition-all duration-300"
-                  aria-label="Join NexXgen training program"
+                  aria-label="Join Nexgen training program"
                 >
                   Join Now <ArrowRight className="ml-2 h-5 w-5" />
                 </Button>
@@ -395,7 +395,7 @@ const Index = () => {
                     size="lg" 
                     variant="outline" 
                     className="px-8 py-4 text-lg hover:bg-primary hover:text-white transition-all duration-300 w-full sm:w-auto"
-                    aria-label="Learn more about NexXgen Healthcare Solutions"
+                    aria-label="Learn more about Nexgen Healthcare Solutions"
                   >
                     Learn More →
                   </Button>
