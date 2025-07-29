@@ -54,7 +54,7 @@ const Header = () => {
         <div className="container mx-auto flex justify-between items-center">
           {/* Logo */}
           <Link to="/" className="text-2xl font-bold text-primary">
-            SPARKZ INFOTECH
+            Nexgen Healthcare Solutions
           </Link>
 
           {/* Desktop Menu */}
@@ -76,25 +76,15 @@ const Header = () => {
               About Us
             </Link>
             
-            {/* Courses Dropdown */}
-            <DropdownMenu>
-              <DropdownMenuTrigger className="flex items-center space-x-1 font-medium text-gray-700 hover:text-primary transition-colors">
-                <span>Courses</span>
-                <ChevronDown className="h-4 w-4" />
-              </DropdownMenuTrigger>
-              <DropdownMenuContent className="w-80 bg-white">
-                {courses.map((course) => (
-                  <DropdownMenuItem key={course.path} asChild>
-                    <Link
-                      to={course.path}
-                      className="w-full px-4 py-2 hover:bg-gray-50 transition-colors"
-                    >
-                      {course.name}
-                    </Link>
-                  </DropdownMenuItem>
-                ))}
-              </DropdownMenuContent>
-            </DropdownMenu>
+            {/* Courses Link */}
+            <Link
+              to="/courses"
+              className={`font-medium transition-colors hover:text-primary ${
+                isActivePath("/courses") ? "text-primary" : "text-gray-700"
+              }`}
+            >
+              Courses
+            </Link>
 
             {/* Admission Dropdown */}
             <DropdownMenu>
@@ -158,9 +148,11 @@ const Header = () => {
 
           {/* CTA Button */}
           <div className="hidden lg:block">
-            <Button className="bg-primary hover:bg-primary-dark text-white px-6 py-2">
-              Request Call Back ➜
-            </Button>
+            <Link to="/contact">
+              <Button className="bg-primary hover:bg-primary-dark text-white px-6 py-2">
+                Request Call Back ➜
+              </Button>
+            </Link>
           </div>
 
           {/* Mobile Menu Button */}
@@ -186,20 +178,9 @@ const Header = () => {
               <Link to="/about" className="font-medium text-gray-700 hover:text-primary">
                 About Us
               </Link>
-              <div className="space-y-2">
-                <div className="font-medium text-gray-700">Courses</div>
-                <div className="pl-4 space-y-2">
-                  {courses.map((course) => (
-                    <Link
-                      key={course.path}
-                      to={course.path}
-                      className="block text-sm text-gray-600 hover:text-primary"
-                    >
-                      {course.name}
-                    </Link>
-                  ))}
-                </div>
-              </div>
+              <Link to="/courses" className="font-medium text-gray-700 hover:text-primary">
+                Courses
+              </Link>
               <div className="space-y-2">
                 <div className="font-medium text-gray-700">Admission</div>
                 <div className="pl-4 space-y-2">
@@ -229,9 +210,11 @@ const Header = () => {
               <Link to="/contact" className="font-medium text-gray-700 hover:text-primary">
                 Contact Us
               </Link>
-              <Button className="bg-primary hover:bg-primary-dark text-white">
-                Request Call Back ➜
-              </Button>
+              <Link to="/contact">
+                <Button className="bg-primary hover:bg-primary-dark text-white">
+                  Request Call Back ➜
+                </Button>
+              </Link>
             </div>
           </div>
         )}
