@@ -25,9 +25,9 @@ const Footer = () => {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
           {/* Column 1 - Logo + Description */}
           <div className="space-y-4">
-            <h3 className="text-2xl font-bold text-primary mb-4">NexXgen Healthcare Solutions</h3>
+            <h3 className="text-2xl font-bold text-primary mb-4">Nexgen Healthcare Solutions</h3>
             <p className="text-gray-300 leading-relaxed">
-              NexXgen Healthcare Solutions is a trusted name in medical coding training, helping students become certified professionals with career-ready skills.
+              Nexgen Healthcare Solutions is a trusted name in medical coding training, helping students become certified professionals with career-ready skills.
             </p>
             <p className="text-primary font-semibold italic">
               "Training Coders. Transforming Careers."
@@ -86,8 +86,8 @@ const Footer = () => {
               <div>
                 <p className="font-medium text-white mb-1">Email:</p>
                 <p className="text-gray-300 text-sm">
-                  <a href="mailto:nexxgenhealthcare@gmail.com" className="hover:text-primary transition-colors">
-                    nexxgenhealthcare@gmail.com
+                  <a href="mailto:Nexgenhealthcare@gmail.com" className="hover:text-primary transition-colors">
+                    Nexgenhealthcare@gmail.com
                   </a>
                 </p>
               </div>
@@ -114,7 +114,7 @@ const Footer = () => {
         {/* Copyright */}
         <div className="border-t border-gray-700 mt-8 pt-6 text-center">
           <p className="text-gray-400">
-            © 2025 NexXgen Healthcare Solutions. All Rights Reserved.
+            © 2025 Nexgen Healthcare Solutions. All Rights Reserved.
           </p>
         </div>
       </div>
