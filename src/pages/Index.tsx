@@ -146,24 +146,28 @@ const Index = () => {
         <div className="container mx-auto px-4 relative z-10">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
             <div className="animate-slide-in-left">
-              <h1 className="text-4xl md:text-6xl font-bold text-gray-900 mb-6 leading-tight">
-                Be Educated!<br />
-                <span className="text-primary bg-gradient-to-r from-primary to-primary-dark bg-clip-text text-transparent">Feel Empowered!</span>
+              <h1 className="text-4xl md:text-6xl font-bold text-foreground mb-6 leading-tight">
+                <span className="bg-gradient-to-r from-primary via-secondary to-primary bg-clip-text text-transparent animate-pulse">
+                  Be Educated!
+                </span><br />
+                <span className="bg-gradient-to-r from-secondary via-primary to-secondary bg-clip-text text-transparent">
+                  Feel Empowered!
+                </span>
               </h1>
-              <p className="text-xl text-gray-600 mb-8 leading-relaxed animate-slide-in-bottom">
-                India's Top Medical Training Providers offering comprehensive 
-                certification programs with 100% placement assistance.
+              <p className="text-xl text-muted-foreground mb-8 leading-relaxed animate-slide-in-bottom">
+                India's Premier Medical Coding Training Institute offering comprehensive 
+                certification programs with guaranteed placement assistance.
               </p>
               <div className="flex flex-col sm:flex-row space-y-4 sm:space-y-0 sm:space-x-4 animate-slide-in-bottom" style={{animationDelay: '0.3s'}}>
                 <Button 
                   size="lg" 
                   onClick={scrollToCourses}
-                  className="bg-primary hover:bg-primary-dark text-white px-8 py-4 text-lg transform hover:scale-105 transition-all duration-300"
+                  className="bg-primary hover:bg-primary-dark text-primary-foreground px-8 py-4 text-lg transform hover:scale-105 transition-all duration-300 shadow-lg hover:shadow-xl"
                 >
                   Find courses <ArrowRight className="ml-2 h-5 w-5" />
                 </Button>
                 <Link to="/contact">
-                  <Button size="lg" variant="outline" className="px-8 py-4 text-lg hover:bg-primary hover:text-white transition-all duration-300 w-full sm:w-auto">
+                  <Button size="lg" variant="outline" className="px-8 py-4 text-lg hover:bg-primary hover:text-primary-foreground transition-all duration-300 w-full sm:w-auto border-primary hover:border-primary-dark">
                     Request Call Back ➜
                   </Button>
                 </Link>

@@ -1,7 +1,8 @@
 import { useState } from "react";
 import { Link, useLocation } from "react-router-dom";
-import { Phone, Mail, Facebook, Instagram, Linkedin, Menu, X, ChevronDown } from "lucide-react";
+import { Phone, Mail, Facebook, Instagram, Linkedin, Menu, X, ChevronDown, Sun, Moon } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import { useTheme } from "next-themes";
 import {
   DropdownMenu,
   DropdownMenuContent,
@@ -23,42 +24,64 @@ const courses = [
 const Header = () => {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const location = useLocation();
+  const { theme, setTheme } = useTheme();
 
   const isActivePath = (path: string) => location.pathname === path;
 
+  const toggleTheme = () => {
+    setTheme(theme === "dark" ? "light" : "dark");
+  };
+
   return (
-    <header className="fixed top-0 left-0 right-0 z-50 bg-white shadow-md">
+    <header className="fixed top-0 left-0 right-0 z-50 bg-background/95 backdrop-blur-sm shadow-lg border-b border-border">
       {/* Top Bar */}
-      <div className="bg-gray-900 text-white py-2 px-4">
+      <div className="bg-primary text-primary-foreground py-3 px-4">
         <div className="container mx-auto flex justify-between items-center text-sm">
           <div className="flex items-center space-x-6">
             <div className="flex items-center space-x-2">
               <Phone className="h-4 w-4" />
-              <span>Call: 7904557490</span>
+              <span className="hidden sm:inline">Call: +91 95822 58292</span>
+              <span className="sm:hidden">+91 95822 58292</span>
             </div>
-            <div className="flex items-center space-x-2">
+            <div className="hidden md:flex items-center space-x-2">
               <Mail className="h-4 w-4" />
-              <span>sparkzcp@gmail.com</span>
+              <span>Nexgenhealthcare@gmail.com</span>
             </div>
           </div>
           <div className="flex items-center space-x-3">
-            <Facebook className="h-4 w-4 hover:text-primary cursor-pointer transition-colors" />
-            <Instagram className="h-4 w-4 hover:text-primary cursor-pointer transition-colors" />
-            <Linkedin className="h-4 w-4 hover:text-primary cursor-pointer transition-colors" />
+            <a href="https://www.facebook.com" target="_blank" rel="noopener noreferrer">
+              <Facebook className="h-4 w-4 hover:text-secondary cursor-pointer transition-colors" />
+            </a>
+            <a href="https://www.instagram.com/nexgen.healthcare" target="_blank" rel="noopener noreferrer">
+              <Instagram className="h-4 w-4 hover:text-secondary cursor-pointer transition-colors" />
+            </a>
+            <a href="https://www.linkedin.com/company/nexgenhealthcoding/" target="_blank" rel="noopener noreferrer">
+              <Linkedin className="h-4 w-4 hover:text-secondary cursor-pointer transition-colors" />
+            </a>
           </div>
         </div>
       </div>
 
       {/* Main Navigation */}
-      <nav className="bg-white py-4 px-4">
+      <nav className="bg-background py-4 px-4">
         <div className="container mx-auto flex justify-between items-center">
           {/* Logo */}
-          <Link to="/" className="text-2xl font-bold text-primary">
-            Nexgen Healthcare Solutions
+          <Link to="/" className="flex items-center space-x-3 group">
+            <img 
+              src="/lovable-uploads/599dbea7-cb8e-4927-9f35-3946214389bd.png" 
+              alt="Nexgen Healthcare Solutions" 
+              className="h-12 w-12 object-contain transition-transform duration-300 group-hover:scale-110"
+            />
+            <div className="flex flex-col">
+              <span className="text-xl font-bold text-primary group-hover:text-secondary transition-colors duration-300">
+                Ne<span className="text-secondary">X</span>gen Healthcare
+              </span>
+              <span className="text-xs text-muted-foreground italic">Solutions</span>
+            </div>
           </Link>
 
           {/* Desktop Menu */}
-          <div className="hidden lg:flex items-center space-x-8">
+          <div className="hidden lg:flex items-center space-x-6">
             <Link
               to="/"
               className={`font-medium transition-colors hover:text-primary ${
@@ -146,32 +169,53 @@ const Header = () => {
             </Link>
           </div>
 
-          {/* CTA Button */}
-          <div className="hidden lg:block">
+          {/* Theme Toggle & CTA Button */}
+          <div className="hidden lg:flex items-center space-x-3">
+            <Button
+              variant="ghost"
+              size="sm"
+              onClick={toggleTheme}
+              className="w-10 h-10 rounded-full p-0 hover:bg-muted hover:scale-110 transition-all duration-300"
+            >
+              <Sun className="h-5 w-5 rotate-0 scale-100 transition-all dark:-rotate-90 dark:scale-0" />
+              <Moon className="absolute h-5 w-5 rotate-90 scale-0 transition-all dark:rotate-0 dark:scale-100" />
+              <span className="sr-only">Toggle theme</span>
+            </Button>
             <Link to="/contact">
-              <Button className="bg-primary hover:bg-primary-dark text-white px-6 py-2">
+              <Button className="bg-primary hover:bg-primary-dark text-primary-foreground px-6 py-2 shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105">
                 Request Call Back ➜
               </Button>
             </Link>
           </div>
 
-          {/* Mobile Menu Button */}
-          <button
-            className="lg:hidden p-2"
-            onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
-          >
-            {isMobileMenuOpen ? (
-              <X className="h-6 w-6" />
-            ) : (
-              <Menu className="h-6 w-6" />
-            )}
-          </button>
+          {/* Mobile Menu Button & Theme Toggle */}
+          <div className="lg:hidden flex items-center space-x-2">
+            <Button
+              variant="ghost"
+              size="sm"
+              onClick={toggleTheme}
+              className="w-10 h-10 rounded-full p-0"
+            >
+              <Sun className="h-5 w-5 rotate-0 scale-100 transition-all dark:-rotate-90 dark:scale-0" />
+              <Moon className="absolute h-5 w-5 rotate-90 scale-0 transition-all dark:rotate-0 dark:scale-100" />
+            </Button>
+            <button
+              className="p-2 hover:bg-muted rounded-lg transition-colors"
+              onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
+            >
+              {isMobileMenuOpen ? (
+                <X className="h-6 w-6" />
+              ) : (
+                <Menu className="h-6 w-6" />
+              )}
+            </button>
+          </div>
         </div>
 
         {/* Mobile Menu */}
         {isMobileMenuOpen && (
-          <div className="lg:hidden mt-4 border-t pt-4">
-            <div className="flex flex-col space-y-4">
+          <div className="lg:hidden mt-4 border-t border-border pt-4 bg-background/95 backdrop-blur-sm rounded-lg mx-4 mb-4 shadow-lg">
+            <div className="flex flex-col space-y-4 p-4">
               <Link to="/" className="font-medium text-gray-700 hover:text-primary">
                 Home
               </Link>
@@ -210,8 +254,8 @@ const Header = () => {
               <Link to="/contact" className="font-medium text-gray-700 hover:text-primary">
                 Contact Us
               </Link>
-              <Link to="/contact">
-                <Button className="bg-primary hover:bg-primary-dark text-white">
+              <Link to="/contact" className="w-full">
+                <Button className="bg-primary hover:bg-primary-dark text-primary-foreground w-full">
                   Request Call Back ➜
                 </Button>
               </Link>

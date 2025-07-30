@@ -8,106 +8,127 @@
 
 @layer base {
   :root {
-    /* Base colors */
     --background: 0 0% 100%;
-    --foreground: 0 0% 8%;
-
-    /* Card colors */
+    --foreground: 222.2 84% 4.9%;
     --card: 0 0% 100%;
-    --card-foreground: 0 0% 8%;
-
-    /* Primary colors - SPARKZ cyan/blue */
-    --primary: 191 85% 56%;
+    --card-foreground: 222.2 84% 4.9%;
+    --popover: 0 0% 100%;
+    --popover-foreground: 222.2 84% 4.9%;
+    
+    /* Nexgen Brand Colors - Navy Blue & Gold */
+    --primary: 221 100% 20%;        /* Navy Blue #001A66 */
     --primary-foreground: 0 0% 100%;
-    --primary-light: 191 85% 65%;
-    --primary-dark: 191 85% 45%;
-
-    /* Secondary colors - Professional red accent */
-    --secondary: 0 84% 60%;
-    --secondary-foreground: 0 0% 100%;
-    --secondary-light: 0 84% 70%;
-
-    /* Success/accent green */
-    --success: 142 76% 36%;
+    --primary-light: 221 100% 35%;  /* Lighter Navy */
+    --primary-dark: 221 100% 15%;   /* Darker Navy */
+    --primary-glow: 221 100% 45%;   /* Glowing Navy */
+    
+    /* Gold Accent */
+    --secondary: 43 96% 56%;        /* Gold #F59E0B */
+    --secondary-foreground: 222.2 84% 4.9%;
+    --secondary-light: 43 96% 70%;  /* Light Gold */
+    --secondary-dark: 43 96% 40%;   /* Dark Gold */
+    
+    /* Success & Support Colors */
+    --success: 142.1 76.2% 36.3%;   /* Green */
     --success-foreground: 0 0% 100%;
-
-    /* Neutral grays */
-    --muted: 210 40% 96%;
-    --muted-foreground: 215 16% 47%;
-    --border: 214 32% 91%;
-    --input: 214 32% 91%;
-
-    /* Gradients */
-    --gradient-primary: linear-gradient(135deg, hsl(var(--primary)), hsl(var(--primary-light)));
-    --gradient-secondary: linear-gradient(135deg, hsl(var(--secondary)), hsl(var(--secondary-light)));
-    --gradient-hero: linear-gradient(135deg, hsl(191 85% 56% / 0.1), hsl(0 84% 60% / 0.1));
-    --gradient-cta: linear-gradient(135deg, hsl(var(--success)), hsl(var(--secondary)));
-
-    /* Shadows */
-    --shadow-sm: 0 1px 2px hsl(0 0% 0% / 0.05);
-    --shadow-md: 0 4px 6px hsl(0 0% 0% / 0.07), 0 2px 4px hsl(0 0% 0% / 0.06);
-    --shadow-lg: 0 10px 15px hsl(0 0% 0% / 0.1), 0 4px 6px hsl(0 0% 0% / 0.05);
-    --shadow-glow: 0 0 30px hsl(var(--primary) / 0.3);
-
-    /* Animations */
+    --accent: 43 96% 56%;           /* Gold accent */
+    --accent-foreground: 222.2 84% 4.9%;
+    
+    /* Neutral Colors */
+    --muted: 220 14.3% 95.9%;
+    --muted-foreground: 220 8.9% 46.1%;
+    --border: 220 13% 91%;
+    --input: 220 13% 91%;
+    --ring: 221 100% 20%;
+    --radius: 0.75rem;
+    
+    /* Gradients - Nexgen Theme */
+    --gradient-primary: linear-gradient(135deg, hsl(221 100% 20%) 0%, hsl(221 100% 35%) 100%);
+    --gradient-hero: linear-gradient(135deg, hsl(221 100% 20%) 0%, hsl(43 96% 56%) 100%);
+    --gradient-cta: linear-gradient(135deg, hsl(43 96% 56%) 0%, hsl(221 100% 20%) 100%);
+    --gradient-brand: linear-gradient(45deg, hsl(221 100% 20%) 0%, hsl(43 96% 56%) 50%, hsl(221 100% 20%) 100%);
+    
+    /* Shadows - Brand themed */
+    --shadow-elegant: 0 10px 30px -10px hsl(221 100% 20% / 0.3);
+    --shadow-glow: 0 0 40px hsl(43 96% 56% / 0.4);
+    --shadow-navy: 0 8px 32px hsl(221 100% 20% / 0.15);
+    
+    /* Transitions */
     --transition-smooth: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-    --transition-bounce: all 0.5s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+    --transition-bounce: all 0.4s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+    
+    /* Chart colors */
+    --chart-1: 221 100% 20%;
+    --chart-2: 43 96% 56%;
+    --chart-3: 142.1 76.2% 36.3%;
+    --chart-4: 259 94% 51%;
+    --chart-5: 346 77% 49%;
 
-    --radius: 0.5rem;
-
+    /* Sidebar */
     --sidebar-background: 0 0% 98%;
-
-    --sidebar-foreground: 240 5.3% 26.1%;
-
-    --sidebar-primary: 240 5.9% 10%;
-
+    --sidebar-foreground: 221 100% 20%;
+    --sidebar-primary: 221 100% 20%;
     --sidebar-primary-foreground: 0 0% 98%;
-
-    --sidebar-accent: 240 4.8% 95.9%;
-
-    --sidebar-accent-foreground: 240 5.9% 10%;
-
+    --sidebar-accent: 43 96% 95%;
+    --sidebar-accent-foreground: 221 100% 20%;
     --sidebar-border: 220 13% 91%;
-
-    --sidebar-ring: 217.2 91.2% 59.8%;
+    --sidebar-ring: 221 100% 20%;
   }
 
   .dark {
-    --background: 222.2 84% 4.9%;
-    --foreground: 210 40% 98%;
-
-    --card: 222.2 84% 4.9%;
-    --card-foreground: 210 40% 98%;
-
-    --popover: 222.2 84% 4.9%;
-    --popover-foreground: 210 40% 98%;
-
-    --primary: 210 40% 98%;
-    --primary-foreground: 222.2 47.4% 11.2%;
-
-    --secondary: 217.2 32.6% 17.5%;
-    --secondary-foreground: 210 40% 98%;
-
-    --muted: 217.2 32.6% 17.5%;
-    --muted-foreground: 215 20.2% 65.1%;
-
-    --accent: 217.2 32.6% 17.5%;
-    --accent-foreground: 210 40% 98%;
-
-    --destructive: 0 62.8% 30.6%;
-    --destructive-foreground: 210 40% 98%;
-
-    --border: 217.2 32.6% 17.5%;
-    --input: 217.2 32.6% 17.5%;
-    --ring: 212.7 26.8% 83.9%;
-    --sidebar-background: 240 5.9% 10%;
-    --sidebar-foreground: 240 4.8% 95.9%;
-    --sidebar-primary: 224.3 76.3% 48%;
-    --sidebar-primary-foreground: 0 0% 100%;
-    --sidebar-accent: 240 3.7% 15.9%;
-    --sidebar-accent-foreground: 240 4.8% 95.9%;
-    --sidebar-border: 240 3.7% 15.9%;
-    --sidebar-ring: 217.2 91.2% 59.8%;
+    --background: 221 100% 8%;       /* Dark Navy Background */
+    --foreground: 0 0% 95%;
+    --card: 221 100% 10%;
+    --card-foreground: 0 0% 95%;
+    --popover: 221 100% 10%;
+    --popover-foreground: 0 0% 95%;
+    
+    /* Dark Mode Brand Colors */
+    --primary: 43 96% 56%;           /* Gold becomes primary in dark */
+    --primary-foreground: 221 100% 15%;
+    --primary-light: 43 96% 70%;
+    --primary-dark: 43 96% 40%;
+    --primary-glow: 43 96% 80%;
+    
+    /* Navy as secondary in dark */
+    --secondary: 221 100% 35%;
+    --secondary-foreground: 0 0% 95%;
+    --secondary-light: 221 100% 45%;
+    --secondary-dark: 221 100% 25%;
+    
+    /* Support colors for dark */
+    --success: 142.1 70.6% 45.3%;
+    --success-foreground: 0 0% 95%;
+    --accent: 43 96% 56%;
+    --accent-foreground: 221 100% 15%;
+    
+    /* Dark neutrals */
+    --muted: 221 39% 15%;
+    --muted-foreground: 220 9% 65%;
+    --border: 221 39% 18%;
+    --input: 221 39% 18%;
+    --ring: 43 96% 56%;
+    
+    /* Dark mode gradients */
+    --gradient-primary: linear-gradient(135deg, hsl(43 96% 56%) 0%, hsl(43 96% 40%) 100%);
+    --gradient-hero: linear-gradient(135deg, hsl(221 100% 8%) 0%, hsl(43 96% 56%) 100%);
+    --gradient-cta: linear-gradient(135deg, hsl(221 100% 15%) 0%, hsl(43 96% 56%) 100%);
+    --gradient-brand: linear-gradient(45deg, hsl(43 96% 56%) 0%, hsl(221 100% 15%) 50%, hsl(43 96% 56%) 100%);
+    
+    /* Dark shadows */
+    --shadow-elegant: 0 10px 30px -10px hsl(43 96% 56% / 0.3);
+    --shadow-glow: 0 0 40px hsl(43 96% 56% / 0.6);
+    --shadow-navy: 0 8px 32px hsl(221 100% 8% / 0.5);
+    
+    /* Sidebar dark */
+    --sidebar-background: 221 100% 8%;
+    --sidebar-foreground: 0 0% 95%;
+    --sidebar-primary: 43 96% 56%;
+    --sidebar-primary-foreground: 221 100% 8%;
+    --sidebar-accent: 221 39% 15%;
+    --sidebar-accent-foreground: 0 0% 95%;
+    --sidebar-border: 221 39% 18%;
+    --sidebar-ring: 43 96% 56%;
   }
 }
 
@@ -122,62 +143,85 @@
 }
 
 @layer components {
-  /* Geometric background patterns */
+  /* Background patterns - Nexgen themed */
   .bg-geometric {
     background-image: 
-      radial-gradient(circle at 25% 25%, hsl(var(--primary) / 0.1) 1px, transparent 1px),
-      radial-gradient(circle at 75% 75%, hsl(var(--secondary) / 0.1) 1px, transparent 1px);
-    background-size: 50px 50px, 80px 80px;
-  }
-  
-  .bg-dots {
-    background-image: radial-gradient(circle, hsl(var(--primary) / 0.2) 1px, transparent 1px);
-    background-size: 30px 30px;
+      radial-gradient(circle at 20% 80%, hsl(221 100% 20% / 0.1) 0%, transparent 50%),
+      radial-gradient(circle at 80% 20%, hsl(43 96% 56% / 0.1) 0%, transparent 50%),
+      radial-gradient(circle at 40% 40%, hsl(221 100% 35% / 0.1) 0%, transparent 50%);
   }
 
-  /* Animated elements */
-  .floating {
-    animation: float 6s ease-in-out infinite;
+  .bg-dots {
+    background-image: radial-gradient(circle at 1px 1px, hsl(43 96% 56% / 0.15) 1px, transparent 0);
+    background-size: 20px 20px;
   }
-  
+
+  /* Interactive elements with brand colors */
   .hover-lift {
     transition: var(--transition-smooth);
   }
-  
+
   .hover-lift:hover {
-    transform: translateY(-8px);
-    box-shadow: var(--shadow-lg);
+    transform: translateY(-5px);
+    box-shadow: var(--shadow-elegant);
   }
 
   /* Custom gradient backgrounds */
   .bg-gradient-hero {
     background: var(--gradient-hero);
   }
-  
+
   .bg-gradient-cta {
     background: var(--gradient-cta);
   }
 
-  /* Course card styles */
+  .bg-gradient-brand {
+    background: var(--gradient-brand);
+  }
+
+  /* Course card with enhanced animations */
   .course-card {
-    @apply bg-card rounded-xl p-6 border;
-    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
-    transform: translateY(0);
+    transition: var(--transition-bounce);
+    backdrop-filter: blur(10px);
+    border: 1px solid hsl(var(--border));
   }
 
   .course-card:hover {
-    transform: translateY(-10px) scale(1.02);
-    box-shadow: 0 25px 50px rgba(0, 0, 0, 0.15);
+    transform: translateY(-12px) scale(1.03);
+    box-shadow: var(--shadow-navy), var(--shadow-glow);
+    border-color: hsl(var(--primary));
+  }
+
+  .course-card img {
+    transition: var(--transition-smooth);
   }
 
   .course-card:hover img {
-    transform: scale(1.1);
-    transition: transform 0.4s ease;
+    transform: scale(1.15) rotate(2deg);
   }
 
-  /* Statistics highlight strip */
+  /* Stats strip with brand gradient */
   .stats-strip {
-    @apply bg-gradient-to-r from-primary to-success text-white py-8;
+    background: var(--gradient-brand);
+    color: white;
+    padding: 4rem 0;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .stats-strip::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: radial-gradient(circle at 30% 40%, hsl(43 96% 56% / 0.2) 0%, transparent 50%);
+  }
+
+  /* Floating animation */
+  .floating {
+    animation: float 6s ease-in-out infinite;
   }
 }
 
@@ -302,10 +346,61 @@
   }
 
   .hero-animated-bg {
-    background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
+    background: linear-gradient(-45deg, hsl(221 100% 20%), hsl(43 96% 56%), hsl(221 100% 35%), hsl(43 96% 70%));
     background-size: 400% 400%;
     animation: heroBgMove 15s ease infinite;
   }
+
+  /* Enhanced course card animations with stagger effect */
+  .course-slide-horizontal {
+    animation: slideHorizontalBounce 1s cubic-bezier(0.68, -0.55, 0.265, 1.55) both;
+  }
+
+  @keyframes slideHorizontalBounce {
+    0% {
+      transform: translateX(-120px) scale(0.8);
+      opacity: 0;
+    }
+    60% {
+      transform: translateX(10px) scale(1.05);
+      opacity: 0.8;
+    }
+    100% {
+      transform: translateX(0) scale(1);
+      opacity: 1;
+    }
+  }
+
+  .course-card-bounce {
+    animation: nexgenBounceIn 0.8s cubic-bezier(0.68, -0.55, 0.265, 1.55) both;
+  }
+
+  @keyframes nexgenBounceIn {
+    0% {
+      transform: scale(0.2) rotate(-5deg);
+      opacity: 0;
+    }
+    40% {
+      transform: scale(1.1) rotate(2deg);
+      opacity: 0.7;
+    }
+    70% {
+      transform: scale(0.95) rotate(-1deg);
+      opacity: 0.9;
+    }
+    100% {
+      transform: scale(1) rotate(0deg);
+      opacity: 1;
+    }
+  }
+
+  /* Staggered animation delays for course cards */
+  .course-card:nth-child(1) { animation-delay: 0.1s; }
+  .course-card:nth-child(2) { animation-delay: 0.2s; }
+  .course-card:nth-child(3) { animation-delay: 0.3s; }
+  .course-card:nth-child(4) { animation-delay: 0.4s; }
+  .course-card:nth-child(5) { animation-delay: 0.5s; }
+  .course-card:nth-child(6) { animation-delay: 0.6s; }
 
   .stats-counter {
     transition: all 0.3s ease;
