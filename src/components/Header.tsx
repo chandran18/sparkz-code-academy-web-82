@@ -68,9 +68,9 @@ const Header = () => {
           {/* Logo */}
           <Link to="/" className="flex items-center space-x-3 group">
             <img 
-              src="/lovable-uploads/599dbea7-cb8e-4927-9f35-3946214389bd.png" 
+              src="/lovable-uploads/f7b3fc7e-9fca-4f95-9a0d-d4d0e43617a4.png" 
               alt="Nexgen Healthcare Solutions" 
-              className="h-12 w-12 object-contain transition-transform duration-300 group-hover:scale-110"
+              className="h-14 w-14 object-contain transition-transform duration-300 group-hover:scale-110 hover:rotate-3"
             />
             <div className="flex flex-col">
               <span className="text-xl font-bold text-primary group-hover:text-secondary transition-colors duration-300">
@@ -81,7 +81,7 @@ const Header = () => {
           </Link>
 
           {/* Desktop Menu */}
-          <div className="hidden lg:flex items-center space-x-6">
+          <div className="hidden lg:flex items-center space-x-6 text-sm xl:text-base">
             <Link
               to="/"
               className={`font-medium transition-colors hover:text-primary ${
@@ -212,50 +212,50 @@ const Header = () => {
           </div>
         </div>
 
-        {/* Mobile Menu */}
+        {/* Enhanced Mobile Menu */}
         {isMobileMenuOpen && (
-          <div className="lg:hidden mt-4 border-t border-border pt-4 bg-background/95 backdrop-blur-sm rounded-lg mx-4 mb-4 shadow-lg">
-            <div className="flex flex-col space-y-4 p-4">
-              <Link to="/" className="font-medium text-gray-700 hover:text-primary">
+          <div className="lg:hidden mt-4 border-t border-border pt-4 bg-background/98 backdrop-blur-md rounded-2xl mx-4 mb-4 shadow-2xl border border-primary/10">
+            <div className="flex flex-col space-y-3 p-6">
+              <Link to="/" className="font-medium text-foreground hover:text-primary transition-all duration-300 py-3 px-4 rounded-xl hover:bg-primary/5">
                 Home
               </Link>
-              <Link to="/about" className="font-medium text-gray-700 hover:text-primary">
+              <Link to="/about" className="font-medium text-foreground hover:text-primary transition-all duration-300 py-3 px-4 rounded-xl hover:bg-primary/5">
                 About Us
               </Link>
-              <Link to="/courses" className="font-medium text-gray-700 hover:text-primary">
+              <Link to="/courses" className="font-medium text-foreground hover:text-primary transition-all duration-300 py-3 px-4 rounded-xl hover:bg-primary/5">
                 Courses
               </Link>
-              <div className="space-y-2">
-                <div className="font-medium text-gray-700">Admission</div>
+              <div className="space-y-3">
+                <div className="font-medium text-foreground py-3 px-4">Admission</div>
                 <div className="pl-4 space-y-2">
                   <Link
                     to="/enrollment"
-                    className="block text-sm text-gray-600 hover:text-primary"
+                    className="block text-sm text-muted-foreground hover:text-primary transition-all duration-300 py-2 px-3 rounded-lg hover:bg-primary/5"
                   >
                     Enroll Now
                   </Link>
                   <Link
                     to="/refer-friend"
-                    className="block text-sm text-gray-600 hover:text-primary"
+                    className="block text-sm text-muted-foreground hover:text-primary transition-all duration-300 py-2 px-3 rounded-lg hover:bg-primary/5"
                   >
                     Refer a Friend
                   </Link>
                 </div>
               </div>
-              <Link to="/results" className="font-medium text-gray-700 hover:text-primary">
+              <Link to="/results" className="font-medium text-foreground hover:text-primary transition-all duration-300 py-3 px-4 rounded-xl hover:bg-primary/5">
                 Our Results
               </Link>
-              <Link to="/gallery" className="font-medium text-gray-700 hover:text-primary">
+              <Link to="/gallery" className="font-medium text-foreground hover:text-primary transition-all duration-300 py-3 px-4 rounded-xl hover:bg-primary/5">
                 Gallery
               </Link>
-              <Link to="/career" className="font-medium text-gray-700 hover:text-primary">
+              <Link to="/career" className="font-medium text-foreground hover:text-primary transition-all duration-300 py-3 px-4 rounded-xl hover:bg-primary/5">
                 Career
               </Link>
-              <Link to="/contact" className="font-medium text-gray-700 hover:text-primary">
+              <Link to="/contact" className="font-medium text-foreground hover:text-primary transition-all duration-300 py-3 px-4 rounded-xl hover:bg-primary/5">
                 Contact Us
               </Link>
-              <Link to="/contact" className="w-full">
-                <Button className="bg-primary hover:bg-primary-dark text-primary-foreground w-full">
+              <Link to="/contact" className="w-full mt-4">
+                <Button className="bg-primary hover:bg-primary-dark text-primary-foreground w-full rounded-xl py-4 text-lg shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105">
                   Request Call Back ➜
                 </Button>
               </Link>

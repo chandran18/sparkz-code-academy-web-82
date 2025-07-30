@@ -22,16 +22,16 @@
     --primary-dark: 221 100% 15%;   /* Darker Navy */
     --primary-glow: 221 100% 45%;   /* Glowing Navy */
     
-    /* Gold Accent */
-    --secondary: 43 96% 56%;        /* Gold #F59E0B */
+    /* Refined Gold Accent - Less Heavy */
+    --secondary: 45 90% 45%;        /* Refined Gold #D4A574 */
     --secondary-foreground: 222.2 84% 4.9%;
-    --secondary-light: 43 96% 70%;  /* Light Gold */
-    --secondary-dark: 43 96% 40%;   /* Dark Gold */
+    --secondary-light: 45 85% 65%;  /* Light Gold */
+    --secondary-dark: 45 95% 35%;   /* Dark Gold */
     
     /* Success & Support Colors */
-    --success: 142.1 76.2% 36.3%;   /* Green */
+    --success: 142.1 70% 42%;       /* Refined Green */
     --success-foreground: 0 0% 100%;
-    --accent: 43 96% 56%;           /* Gold accent */
+    --accent: 45 90% 45%;           /* Refined Gold accent */
     --accent-foreground: 222.2 84% 4.9%;
     
     /* Neutral Colors */
@@ -42,16 +42,16 @@
     --ring: 221 100% 20%;
     --radius: 0.75rem;
     
-    /* Gradients - Nexgen Theme */
+    /* Refined Gradients - Nexgen Theme */
     --gradient-primary: linear-gradient(135deg, hsl(221 100% 20%) 0%, hsl(221 100% 35%) 100%);
-    --gradient-hero: linear-gradient(135deg, hsl(221 100% 20%) 0%, hsl(43 96% 56%) 100%);
-    --gradient-cta: linear-gradient(135deg, hsl(43 96% 56%) 0%, hsl(221 100% 20%) 100%);
-    --gradient-brand: linear-gradient(45deg, hsl(221 100% 20%) 0%, hsl(43 96% 56%) 50%, hsl(221 100% 20%) 100%);
+    --gradient-hero: linear-gradient(135deg, hsl(221 100% 20%) 0%, hsl(45 85% 50%) 100%);
+    --gradient-cta: linear-gradient(135deg, hsl(45 85% 50%) 0%, hsl(221 100% 20%) 100%);
+    --gradient-brand: linear-gradient(45deg, hsl(221 100% 20%) 0%, hsl(45 85% 50%) 50%, hsl(221 100% 20%) 100%);
     
-    /* Shadows - Brand themed */
-    --shadow-elegant: 0 10px 30px -10px hsl(221 100% 20% / 0.3);
-    --shadow-glow: 0 0 40px hsl(43 96% 56% / 0.4);
-    --shadow-navy: 0 8px 32px hsl(221 100% 20% / 0.15);
+    /* Refined Shadows - Brand themed */
+    --shadow-elegant: 0 10px 30px -10px hsl(221 100% 20% / 0.25);
+    --shadow-glow: 0 0 40px hsl(45 85% 50% / 0.3);
+    --shadow-navy: 0 8px 32px hsl(221 100% 20% / 0.12);
     
     /* Transitions */
     --transition-smooth: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
@@ -84,11 +84,11 @@
     --popover-foreground: 0 0% 95%;
     
     /* Dark Mode Brand Colors */
-    --primary: 43 96% 56%;           /* Gold becomes primary in dark */
+    --primary: 45 85% 55%;           /* Refined Gold becomes primary in dark */
     --primary-foreground: 221 100% 15%;
-    --primary-light: 43 96% 70%;
-    --primary-dark: 43 96% 40%;
-    --primary-glow: 43 96% 80%;
+    --primary-light: 45 80% 70%;
+    --primary-dark: 45 90% 40%;
+    --primary-glow: 45 80% 75%;
     
     /* Navy as secondary in dark */
     --secondary: 221 100% 35%;
@@ -97,9 +97,9 @@
     --secondary-dark: 221 100% 25%;
     
     /* Support colors for dark */
-    --success: 142.1 70.6% 45.3%;
+    --success: 142.1 65% 48%;
     --success-foreground: 0 0% 95%;
-    --accent: 43 96% 56%;
+    --accent: 45 85% 55%;
     --accent-foreground: 221 100% 15%;
     
     /* Dark neutrals */
@@ -110,25 +110,25 @@
     --ring: 43 96% 56%;
     
     /* Dark mode gradients */
-    --gradient-primary: linear-gradient(135deg, hsl(43 96% 56%) 0%, hsl(43 96% 40%) 100%);
-    --gradient-hero: linear-gradient(135deg, hsl(221 100% 8%) 0%, hsl(43 96% 56%) 100%);
-    --gradient-cta: linear-gradient(135deg, hsl(221 100% 15%) 0%, hsl(43 96% 56%) 100%);
-    --gradient-brand: linear-gradient(45deg, hsl(43 96% 56%) 0%, hsl(221 100% 15%) 50%, hsl(43 96% 56%) 100%);
+    --gradient-primary: linear-gradient(135deg, hsl(45 85% 55%) 0%, hsl(45 90% 40%) 100%);
+    --gradient-hero: linear-gradient(135deg, hsl(221 100% 8%) 0%, hsl(45 85% 55%) 100%);
+    --gradient-cta: linear-gradient(135deg, hsl(221 100% 15%) 0%, hsl(45 85% 55%) 100%);
+    --gradient-brand: linear-gradient(45deg, hsl(45 85% 55%) 0%, hsl(221 100% 15%) 50%, hsl(45 85% 55%) 100%);
     
     /* Dark shadows */
-    --shadow-elegant: 0 10px 30px -10px hsl(43 96% 56% / 0.3);
-    --shadow-glow: 0 0 40px hsl(43 96% 56% / 0.6);
-    --shadow-navy: 0 8px 32px hsl(221 100% 8% / 0.5);
+    --shadow-elegant: 0 10px 30px -10px hsl(45 85% 55% / 0.25);
+    --shadow-glow: 0 0 40px hsl(45 85% 55% / 0.5);
+    --shadow-navy: 0 8px 32px hsl(221 100% 8% / 0.4);
     
     /* Sidebar dark */
     --sidebar-background: 221 100% 8%;
     --sidebar-foreground: 0 0% 95%;
-    --sidebar-primary: 43 96% 56%;
+    --sidebar-primary: 45 85% 55%;
     --sidebar-primary-foreground: 221 100% 8%;
     --sidebar-accent: 221 39% 15%;
     --sidebar-accent-foreground: 0 0% 95%;
     --sidebar-border: 221 39% 18%;
-    --sidebar-ring: 43 96% 56%;
+    --sidebar-ring: 45 85% 55%;
   }
 }
 
@@ -152,7 +152,7 @@
   }
 
   .bg-dots {
-    background-image: radial-gradient(circle at 1px 1px, hsl(43 96% 56% / 0.15) 1px, transparent 0);
+    background-image: radial-gradient(circle at 1px 1px, hsl(45 85% 50% / 0.12) 1px, transparent 0);
     background-size: 20px 20px;
   }
 
@@ -216,7 +216,7 @@
     left: 0;
     right: 0;
     bottom: 0;
-    background: radial-gradient(circle at 30% 40%, hsl(43 96% 56% / 0.2) 0%, transparent 50%);
+    background: radial-gradient(circle at 30% 40%, hsl(45 85% 50% / 0.15) 0%, transparent 50%);
   }
 
   /* Floating animation */
@@ -346,7 +346,7 @@
   }
 
   .hero-animated-bg {
-    background: linear-gradient(-45deg, hsl(221 100% 20%), hsl(43 96% 56%), hsl(221 100% 35%), hsl(43 96% 70%));
+    background: linear-gradient(-45deg, hsl(221 100% 20%), hsl(45 85% 50%), hsl(221 100% 35%), hsl(45 80% 65%));
     background-size: 400% 400%;
     animation: heroBgMove 15s ease infinite;
   }
@@ -356,17 +356,51 @@
     animation: slideHorizontalBounce 1s cubic-bezier(0.68, -0.55, 0.265, 1.55) both;
   }
 
+  /* Mobile-first responsive course cards */
+  .mobile-course-card {
+    @apply rounded-3xl shadow-xl hover:shadow-2xl transition-all duration-500;
+    background: linear-gradient(145deg, hsl(var(--card)), hsl(var(--card)));
+    border: 2px solid hsl(var(--border));
+    transform-style: preserve-3d;
+  }
+
+  .mobile-course-card:hover {
+    transform: translateY(-8px) scale(1.02) rotateX(5deg);
+    border-color: hsl(var(--primary));
+    box-shadow: 0 20px 40px hsl(var(--primary) / 0.15);
+  }
+
   @keyframes slideHorizontalBounce {
     0% {
-      transform: translateX(-120px) scale(0.8);
+      transform: translateX(-120px) scale(0.8) rotate(-5deg);
       opacity: 0;
     }
     60% {
-      transform: translateX(10px) scale(1.05);
+      transform: translateX(10px) scale(1.05) rotate(2deg);
       opacity: 0.8;
     }
     100% {
-      transform: translateX(0) scale(1);
+      transform: translateX(0) scale(1) rotate(0deg);
+      opacity: 1;
+    }
+  }
+
+  /* Mobile course card unique animations */
+  .mobile-bounce-in {
+    animation: mobileBounceIn 0.8s cubic-bezier(0.68, -0.55, 0.265, 1.55) both;
+  }
+
+  @keyframes mobileBounceIn {
+    0% {
+      transform: scale(0.3) rotate(-10deg);
+      opacity: 0;
+    }
+    50% {
+      transform: scale(1.1) rotate(5deg);
+      opacity: 0.8;
+    }
+    100% {
+      transform: scale(1) rotate(0deg);
       opacity: 1;
     }
   }
@@ -401,6 +435,28 @@
   .course-card:nth-child(4) { animation-delay: 0.4s; }
   .course-card:nth-child(5) { animation-delay: 0.5s; }
   .course-card:nth-child(6) { animation-delay: 0.6s; }
+  .course-card:nth-child(7) { animation-delay: 0.7s; }
+  .course-card:nth-child(8) { animation-delay: 0.8s; }
+  .course-card:nth-child(9) { animation-delay: 0.9s; }
+
+  /* Mobile responsive enhancements */
+  @media (max-width: 768px) {
+    .mobile-enhanced {
+      @apply px-3 py-2;
+    }
+    
+    .mobile-text-responsive {
+      @apply text-sm leading-relaxed;
+    }
+    
+    .mobile-button-enhanced {
+      @apply w-full py-4 text-base rounded-2xl shadow-lg;
+    }
+    
+    .mobile-card-spacing {
+      @apply space-y-6;
+    }
+  }
 
   .stats-counter {
     transition: all 0.3s ease;

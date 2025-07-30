@@ -104,42 +104,53 @@ const Courses = () => {
     <div className="min-h-screen bg-background">
       <Header />
       
-      {/* Hero Section with Gradient */}
-      <section className="pt-32 pb-16 bg-gradient-to-r from-purple-600 via-blue-600 to-blue-700 text-white">
-        <div className="container mx-auto px-4">
+      {/* Enhanced Hero Section with Gradient */}
+      <section className="pt-32 pb-16 bg-gradient-to-r from-primary via-secondary to-primary text-white relative overflow-hidden">
+        <div className="absolute inset-0 bg-dots opacity-10"></div>
+        <div className="container mx-auto px-4 relative z-10">
           {/* Breadcrumb */}
-          <nav className="text-sm mb-6 opacity-90">
-            <Link to="/" className="hover:text-blue-200 transition-colors">Home</Link>
+          <nav className="text-sm mb-6 opacity-90 animate-slide-in-left">
+            <Link to="/" className="hover:text-secondary transition-colors duration-300">Home</Link>
             <span className="mx-2">/</span>
             <span>Courses</span>
           </nav>
           
-          <div className="flex flex-col md:flex-row justify-between items-center">
-            <div>
-              <h1 className="text-4xl md:text-5xl font-bold mb-4">All Courses</h1>
-              <p className="text-lg md:text-xl opacity-90 mb-6">
-                Comprehensive medical coding training programs designed for your success
+          <div className="flex flex-col lg:flex-row justify-between items-center">
+            <div className="animate-slide-in-left">
+              <h1 className="text-4xl md:text-6xl font-bold mb-4 leading-tight">
+                <span className="bg-gradient-to-r from-white via-secondary-light to-white bg-clip-text text-transparent">
+                  All Courses
+                </span>
+              </h1>
+              <p className="text-lg md:text-xl opacity-90 mb-6 max-w-2xl">
+                Comprehensive medical coding training programs designed for your career success
               </p>
             </div>
-            <div className="text-center">
-              <Badge variant="secondary" className="text-lg px-6 py-3 bg-white/20 text-white border-white/30">
-                {coursesData.length} Courses
-              </Badge>
+            <div className="text-center animate-slide-in-right">
+              <div className="bg-white/20 backdrop-blur-md rounded-3xl p-6 border border-white/30 hover:scale-105 transition-transform duration-300">
+                <div className="text-3xl font-bold text-secondary mb-2">{coursesData.length}</div>
+                <div className="text-white/90">Available Courses</div>
+              </div>
             </div>
           </div>
         </div>
       </section>
 
-      {/* Course Filter Tabs */}
-      <section className="py-8 bg-gray-50">
+      {/* Enhanced Course Filter Tabs */}
+      <section className="py-8 bg-gradient-to-br from-background via-muted/30 to-background">
         <div className="container mx-auto px-4">
-          <div className="flex flex-wrap gap-2 justify-center">
-            {categories.map((category) => (
+          <div className="flex flex-wrap gap-3 justify-center">
+            {categories.map((category, index) => (
               <Button
                 key={category}
                 variant={selectedCategory === category ? "default" : "outline"}
                 onClick={() => setSelectedCategory(category)}
-                className="mb-2"
+                className={`mb-3 px-6 py-3 rounded-full font-medium transition-all duration-300 hover:scale-105 ${
+                  selectedCategory === category 
+                    ? "bg-primary text-primary-foreground shadow-lg" 
+                    : "hover:bg-primary/10 hover:border-primary"
+                } animate-fade-in-up`}
+                style={{ animationDelay: `${index * 100}ms` }}
               >
                 {category}
               </Button>
@@ -148,73 +159,77 @@ const Courses = () => {
         </div>
       </section>
 
-      {/* Courses Grid */}
+      {/* Enhanced Mobile-First Courses Grid */}
       <section className="py-16">
         <div className="container mx-auto px-4">
-          <div className="grid gap-8 md:gap-6">
+          <div className="grid gap-8 mobile-card-spacing">
             {filteredCourses.map((course, index) => (
               <Card 
                 key={course.id} 
-                className="group hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1 animate-fade-in border-0 shadow-lg"
-                style={{ animationDelay: `${index * 100}ms` }}
+                className="mobile-course-card group overflow-hidden border-0 shadow-lg mobile-bounce-in"
+                style={{ animationDelay: `${index * 150}ms` }}
               >
                 <CardContent className="p-0">
-                  <div className="flex flex-col md:flex-row">
-                    {/* Course Image */}
-                    <div className="md:w-1/3 lg:w-1/4">
-                      <div className="h-64 md:h-full bg-gradient-to-br from-blue-100 to-purple-100 rounded-l-lg flex items-center justify-center">
-                        <div className="text-center p-6">
-                          <div className="w-16 h-16 mx-auto mb-4 bg-gradient-to-r from-blue-500 to-purple-500 rounded-full flex items-center justify-center">
-                            <Users className="h-8 w-8 text-white" />
+                  <div className="flex flex-col lg:flex-row">
+                    {/* Enhanced Course Image */}
+                    <div className="lg:w-1/3 xl:w-1/4">
+                      <div className="h-48 sm:h-64 lg:h-full bg-gradient-to-br from-primary/10 via-secondary/10 to-primary/20 relative overflow-hidden">
+                        <div className="absolute inset-0 bg-dots opacity-20"></div>
+                        <div className="relative z-10 h-full flex items-center justify-center p-6">
+                          <div className="text-center">
+                            <div className="w-20 h-20 mx-auto mb-4 bg-gradient-to-r from-primary to-secondary rounded-full flex items-center justify-center shadow-lg group-hover:scale-110 transition-transform duration-300">
+                              <Users className="h-10 w-10 text-white" />
+                            </div>
+                            <Badge variant="outline" className="bg-white/80 backdrop-blur-sm border-primary/20 text-primary font-medium px-3 py-1 rounded-full">
+                              {course.category}
+                            </Badge>
                           </div>
-                          <Badge variant="outline" className="text-xs">
-                            {course.category}
-                          </Badge>
                         </div>
                       </div>
                     </div>
                     
-                    {/* Course Details */}
-                    <div className="md:w-2/3 lg:w-3/4 p-6">
-                      <CardHeader className="p-0 mb-4">
-                        <div className="flex flex-col sm:flex-row justify-between items-start mb-2">
-                          <CardTitle className="text-xl md:text-2xl text-primary group-hover:text-blue-600 transition-colors">
+                    {/* Enhanced Course Details */}
+                    <div className="lg:w-2/3 xl:w-3/4 p-6 lg:p-8">
+                      <CardHeader className="p-0 mb-6">
+                        <div className="flex flex-col sm:flex-row justify-between items-start mb-4">
+                          <CardTitle className="text-xl md:text-2xl lg:text-3xl text-foreground group-hover:text-primary transition-colors duration-300 leading-tight">
                             {course.title}
                           </CardTitle>
-                          <div className="flex items-center gap-2 mt-2 sm:mt-0">
-                            <Calendar className="h-4 w-4 text-muted-foreground" />
-                            <span className="text-sm font-medium text-muted-foreground">
+                          <div className="flex items-center gap-2 mt-3 sm:mt-0 bg-muted/50 rounded-full px-4 py-2">
+                            <Calendar className="h-4 w-4 text-primary" />
+                            <span className="text-sm font-semibold text-primary">
                               {course.duration}
                             </span>
                           </div>
                         </div>
                         
-                        <div className="flex items-center gap-2 mb-3">
-                          <Globe className="h-4 w-4 text-green-600" />
-                          <span className="text-sm text-green-600 font-medium">
+                        <div className="flex items-center gap-2 mb-4 bg-success/10 rounded-full w-fit px-4 py-2">
+                          <Globe className="h-4 w-4 text-success" />
+                          <span className="text-sm text-success font-semibold">
                             {course.mode}
                           </span>
                         </div>
                         
-                        <CardDescription className="text-base leading-relaxed">
+                        <CardDescription className="text-base lg:text-lg leading-relaxed text-muted-foreground mobile-text-responsive">
                           {course.description}
                         </CardDescription>
                       </CardHeader>
                       
-                      <div className="flex flex-col sm:flex-row gap-4 items-start sm:items-center justify-between">
-                        <Link to={`/courses/${course.id}`}>
+                      <div className="flex flex-col sm:flex-row gap-6 items-start sm:items-center justify-between">
+                        <Link to={`/courses/${course.id}`} className="w-full sm:w-auto">
                           <Button 
                             variant="outline" 
-                            className="group/btn hover:bg-primary hover:text-white transition-all duration-300"
+                            size="lg"
+                            className="group/btn hover:bg-primary hover:text-primary-foreground transition-all duration-300 hover:scale-105 border-primary hover:border-primary-dark shadow-md hover:shadow-lg mobile-button-enhanced sm:mobile-button-enhanced:w-auto rounded-full px-8"
                           >
                             Learn More
-                            <ArrowRight className="ml-2 h-4 w-4 group-hover/btn:translate-x-1 transition-transform" />
+                            <ArrowRight className="ml-2 h-5 w-5 group-hover/btn:translate-x-2 transition-transform duration-300" />
                           </Button>
                         </Link>
                         
-                        <div className="text-right">
+                        <div className="text-center sm:text-right bg-gradient-to-r from-primary/5 to-secondary/5 rounded-2xl p-4 w-full sm:w-auto">
                           <p className="text-sm text-muted-foreground mb-1">Starting from</p>
-                          <p className="text-2xl font-bold text-primary">₹15,000</p>
+                          <p className="text-2xl lg:text-3xl font-bold text-primary">₹15,000</p>
                           <p className="text-xs text-muted-foreground">EMI available</p>
                         </div>
                       </div>
@@ -227,24 +242,36 @@ const Courses = () => {
         </div>
       </section>
 
-      {/* CTA Section */}
-      <section className="py-16 bg-gradient-to-r from-blue-600 to-purple-600 text-white">
-        <div className="container mx-auto px-4 text-center">
-          <h2 className="text-3xl md:text-4xl font-bold mb-4">
-            Ready to Start Your Medical Coding Journey?
-          </h2>
-          <p className="text-lg md:text-xl opacity-90 mb-8 max-w-2xl mx-auto">
-            Join thousands of successful medical coders who started their careers with NexXgen Healthcare Solutions
-          </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Link to="/enrollment">
-              <Button size="lg" variant="secondary" className="bg-white text-blue-600 hover:bg-gray-100">
-                Enroll Now
+      {/* Enhanced CTA Section */}
+      <section className="py-20 bg-gradient-to-r from-primary via-secondary to-primary text-white relative overflow-hidden">
+        <div className="absolute inset-0 bg-dots opacity-10"></div>
+        <div className="container mx-auto px-4 text-center relative z-10">
+          <div className="animate-slide-in-bottom">
+            <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6 leading-tight">
+              <span className="bg-gradient-to-r from-white via-secondary-light to-white bg-clip-text text-transparent">
+                Ready to Start Your Medical Coding Journey?
+              </span>
+            </h2>
+            <p className="text-lg md:text-xl lg:text-2xl opacity-90 mb-10 max-w-3xl mx-auto leading-relaxed">
+              Join thousands of successful medical coders who transformed their careers with Nexgen Healthcare Solutions
+            </p>
+          </div>
+          <div className="flex flex-col sm:flex-row gap-6 justify-center items-center animate-slide-in-bottom" style={{animationDelay: '0.3s'}}>
+            <Link to="/enrollment" className="w-full sm:w-auto">
+              <Button 
+                size="lg" 
+                className="bg-white text-primary hover:bg-secondary hover:text-primary-foreground transition-all duration-300 hover:scale-105 shadow-lg hover:shadow-xl mobile-button-enhanced sm:mobile-button-enhanced:w-auto rounded-full px-8 py-4 text-lg font-semibold"
+              >
+                Enroll Now ➜
               </Button>
             </Link>
-            <Link to="/contact">
-              <Button size="lg" variant="outline" className="border-white text-white hover:bg-white hover:text-blue-600">
-                Contact Us
+            <Link to="/contact" className="w-full sm:w-auto">
+              <Button 
+                size="lg" 
+                variant="outline" 
+                className="border-white text-white hover:bg-white hover:text-primary transition-all duration-300 hover:scale-105 shadow-lg hover:shadow-xl mobile-button-enhanced sm:mobile-button-enhanced:w-auto rounded-full px-8 py-4 text-lg font-semibold backdrop-blur-sm"
+              >
+                Contact Us ➜
               </Button>
             </Link>
           </div>

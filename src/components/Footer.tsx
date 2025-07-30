@@ -42,9 +42,9 @@ const Footer = () => {
           <div className="space-y-4">
             <div className="flex items-center space-x-3 mb-4">
               <img 
-                src="/lovable-uploads/599dbea7-cb8e-4927-9f35-3946214389bd.png" 
+                src="/lovable-uploads/f7b3fc7e-9fca-4f95-9a0d-d4d0e43617a4.png" 
                 alt="Nexgen Healthcare Solutions" 
-                className="h-12 w-12 object-contain"
+                className="h-14 w-14 object-contain"
               />
               <div>
                 <h3 className="text-xl font-bold text-secondary">
